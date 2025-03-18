@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {  
+    font-family: 'Poppins', sans-serif;
+    background-color:white;
+    color: black;
+    overflow-x: hidden;
+}
+
+.navbar-toggler-icon{
+    background-image: url("img/react.png")!important;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.container-bg {
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+}
+
+.container .text {
+    color: black;
+    flex: 1 1 60%;
+    text-align: justify;
+    padding: 20px;
+    order: 2;
+}
+
+.profile-image {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    margin: 0;
+    display: block;
+    object-fit: cover; 
+    border-radius: 100px;
+}
+.presentation {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.presentation small{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.custom-carousel {
+    width: 100%;
+    max-height: 5%; 
+    margin: 0 auto; 
+}
+
+.custom-carousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-carousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 110vh;
+    min-height: 110vh;
+    object-fit: cover;
+    margin: -3px;
+}
+
+.navbar {
+    color: black;
+}
+
+.navbar .navbar-brand {
+    margin-right: auto;
+    color: black;
+}
+
+.navbar .navbar-brand:hover {
+    color: blue;
+}
+
+.navbar .navbar-nav {
+    margin-left: auto;
+}
+
+.navbar .nav-link {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: blue;
+}
+
+/* Estilo dos Cards */
+
+.container-contact {
+    display: flex;
+    overflow: auto;
+    flex-direction: column; /* Alterado para coluna */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    height: auto; /* Altura ajustável */
+    padding: 20px; /* Espaçamento interno */
+    background-color: black;
+}
+
+.container-contact h1 {
+    color: white;
+    margin-bottom: 20px; /* Adicionado espaço abaixo do h1 */
+    text-align: center; /* Centralizado */
+}
+
+.container-contact .contact-cards {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 30vh;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.473);
+}
+
+.contact-card :hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.contact-card img {
+    width: 80px;
+    height: 80px;   
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-card a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: blue;
+}
+
+
+#projects {
+    padding: 20px;
+    background-color: black ;
+}
+
+#projects h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    margin-top: 7rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.493);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.project:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.project:hover h3 {
+    color: blue;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: 150px;
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.project p {
+    padding: 0 10px 10px;
+    color: #000000;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+}
+
+[data-delay] {
+    animation-delay: var(--animation-delay);
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-card {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+        position: static;
+        transform: none;
+    }
+    .profile-image {
+        margin-top: 200px;
+        width: 100%; 
+        max-width: 600px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-card p {
+        font-size: 0.9rem;
+    }
+
+    
+
+    .contact-card{
+        width: 100%; 
+        margin-bottom: 15px;
+    }
+}
