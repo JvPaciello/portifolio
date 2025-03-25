@@ -312,6 +312,12 @@ html, body {
 }
 
 @media (max-width: 480px) {
+    .presentation{
+        height: 70vh;
+    }
+    .container{
+        margin-top: 90vh;
+    }
     .contact-card img {
         width: 60px;
         height: 60px;
