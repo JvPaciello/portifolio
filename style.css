@@ -57,10 +57,14 @@ html, body {
     justify-content: center;
 }
 
-.presentation h2 {
-    font-size: 2.5rem;
+.presentation h1 {
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
+}
+
+.presentation h1 span{
+    color: blue;
 }
 
 .presentation small{
@@ -99,9 +103,6 @@ html, body {
     color: black;
 }
 
-.navbar .navbar-brand:hover {
-    color: blue;
-}
 
 .navbar .navbar-nav {
     margin-left: auto;
