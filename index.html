@@ -68,9 +68,6 @@
     </div>
 </section>
 
-
- 
-
   <!-- Section: Contact -->
   <section id="contact" class="contact">
     <div class="container-contact">
@@ -118,16 +115,15 @@
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // Adicionar atraso em cascata
           entry.target.style.setProperty('--animation-delay', `${index * 0.2}s`);
           entry.target.classList.add('fade-in');
-          observer.unobserve(entry.target); // Parar de observar após a animação
+          observer.unobserve(entry.target); 
         }
       });
     }, { threshold: 0.2 });
 
     elements.forEach((el, index) => {
-      el.setAttribute("data-delay", index); // Atribuir índice para controle
+      el.setAttribute("data-delay", index); 
       observer.observe(el);
     });
   });
