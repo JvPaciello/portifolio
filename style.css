@@ -9,7 +9,54 @@ html, body {
     background-color:white;
     color: black;
     overflow-x: hidden;
+    cursor: none;
 }
+
+/* Hide default cursor */
+html {
+  cursor: none;
+}
+
+/* Main cursor (small ball) */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+}
+
+/* Cursor follower (empty circle) */
+.cursor-follower {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 20px solid #390ca34b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover states */
+.cursor-hover:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #3a0ca3;
+  opacity: 0.7;
+}
+
+.cursor-hover:hover ~ .cursor-follower {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0.3;
+}
+
 
 .navbar-toggler-icon{
     background-image: url("img/react.png")!important;
@@ -218,7 +265,7 @@ html, body {
     width: 300px;
     text-align: center;
     overflow: hidden;
-    cursor: pointer;
+    cursor: none !important;
 }
 .project:hover img {
     transform: scale(1.05);
@@ -227,6 +274,7 @@ html, body {
 .project a{
     text-decoration: none;
     color: black;
+    cursor: none;
 }
 .project:hover h3 {
     color: rgb(22, 22, 22);
@@ -341,3 +389,13 @@ html, body {
         margin-bottom: 15px;
     }
 }
+
+/* Mobile fallback */
+@media (pointer: coarse) {
+    html {
+      cursor: default;
+    }
+    .cursor, .cursor-follower {
+      display: none;
+    }
+  }
