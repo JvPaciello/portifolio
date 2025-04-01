@@ -198,7 +198,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #ffffff83;
     color: #000000;
     border-radius: 15px;
     text-align: center;
@@ -206,7 +206,7 @@ html {
     height: 30vh;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.473);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.705);
 }
 
 .contact-card :hover {
@@ -299,9 +299,60 @@ html {
     color: #000000;
 }
 
+.technologies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    padding: 20px;
+}
 
+.container-tech {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
 
+.container-tech h2 {
+    font-size: 2.5rem;
+    margin-bottom: 200px;
+    color: rgb(255, 255, 255);
+}
 
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.tech-card {
+    background-color: #ffffff8e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.664);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 12px rgba(255, 255, 255, 0.397);
+}
+
+.tech-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.tech-card p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
 
 @keyframes fadeIn {
     from {
@@ -362,6 +413,46 @@ html {
         width: 100%; 
         max-width: 600px; 
     }
+    .container-tech h2 {
+        font-size: 2rem;
+    }
+
+    .tech-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tech-card p {
+        font-size: 0.9rem;
+    }
+
+    .technologies {
+        padding: 10px;
+        height: auto;
+    }
+
+    .container-tech h2 {
+        font-size: 2rem;
+        margin-bottom: 100px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .tech-card {
+        padding: 15px;
+    }
+
+    .tech-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tech-card p {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -389,6 +480,29 @@ html {
     .contact-card{
         width: 100%; 
         margin-bottom: 15px;
+    }
+
+    .technologies {
+        padding: 5px;
+    }
+
+    .container-tech h2 {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .tech-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-card p {
+        font-size: 0.8rem;
     }
 }
 
