@@ -272,12 +272,15 @@ html {
     transition: transform 0.3s ease;
 }
 .project a{
-    text-decoration: none;
     color: black;
-    cursor: none;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(255, 253, 253, 0.247);
 }
-.project:hover h3 {
-    color: rgb(22, 22, 22);
+.project a:hover {
+    color: #0004ff;
+
 }
 
 .project img {
