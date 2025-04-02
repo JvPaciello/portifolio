@@ -48,3 +48,44 @@ document.addEventListener('click', () => {
 document.querySelectorAll('a, button, [data-cursor-hover]').forEach(el => {
   el.classList.add('cursor-hover');
 });
+
+//Fade in e fade out
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".project, .contact-card, .tech-card");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        entry.target.classList.remove('fade-out');
+        setTimeout(() => {
+      entry.target.style.pointerEvents = 'auto'; // Habilita interações
+    }, 10);
+      } else {
+        entry.target.classList.remove('fade-in');
+        entry.target.classList.add('fade-out');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".project, .contact-card, .tech-card");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.setProperty('--animation-delay', `${index * 0.1}s`);
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach((el, index) => {
+    el.setAttribute("data-delay", index); 
+    observer.observe(el);
+  });
+});
