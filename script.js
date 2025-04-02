@@ -21,8 +21,8 @@ function animateCursor() {
   ballY += (mouseY - ballY) / 3;
   
   // Circle movement (slower and more laggy)
-  circleX += (mouseX - circleX) / 7;
-  circleY += (mouseY - circleY) / 7;
+  circleX += (mouseX - circleX) / 9;
+  circleY += (mouseY - circleY) / 9;  
   
   // Apply positions
   cursor.style.left = `${ballX}px`; // Small ball
