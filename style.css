@@ -6,8 +6,6 @@
 
 html, body {  
     font-family: 'Poppins', sans-serif;
-    background-color:white;
-    color: black;
     overflow-x: hidden;
     cursor: none;
 }
@@ -301,6 +299,56 @@ html {
     color: #000000;
 }
 
+
+/* About Me Section */
+.about {
+    padding: 60px 20px;
+    background-color: #000000; /* A very light gray for a subtle contrast */
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 100px;
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+  
+  .about-img {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .about-text {
+    flex: 1 1 55%;
+    padding: 20px;
+  }
+  
+  .about-text h2 {
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-align: center;
+  }
+  
+  .about-text p {
+    line-height: 1.6;
+    text-align: center;
+    color: #202020;
+  }
+
 .technologies {
     display: flex;
     align-items: center;
@@ -418,9 +466,27 @@ html {
         font-size: 2rem;
     }
 
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .about-img,
+      .about-text {
+        flex: 1 1 100%;
+      }
+      
+      .about-img {
+        margin-bottom: 30px;
+      }
+
     .tech-card img {
         width: 60px;
         height: 60px;
+    }
+
+    .tech-card{
+        width: 100px;
     }
 
     .tech-card p {
@@ -429,7 +495,7 @@ html {
 
     .technologies {
         padding: 10px;
-        height: auto;
+        height: 70vh;
     }
 
     .container-tech h2 {
