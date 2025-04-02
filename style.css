@@ -198,7 +198,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff83;
+    background-color: #ffffff;
     color: #000000;
     border-radius: 15px;
     text-align: center;
@@ -208,12 +208,6 @@ html {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.705);
 }
-
-.contact-card :hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
 
 .contact-card img {
     width: 80px;
