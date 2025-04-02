@@ -132,6 +132,9 @@
           if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
             entry.target.classList.remove('fade-out');
+            setTimeout(() => {
+          entry.target.style.pointerEvents = 'auto'; // Habilita interações
+        }, 1000);
           } else {
             entry.target.classList.remove('fade-in');
             entry.target.classList.add('fade-out');

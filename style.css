@@ -207,6 +207,16 @@ html {
     margin: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.705);
+    transform: translateY(0);
+    transition: 
+    transform 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.contact-card:hover{
+    transform: translateY(-10px) scale(1.05)!important;
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.397);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .contact-card img {
@@ -332,7 +342,7 @@ html {
 }
 
 .tech-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.05)!important;
     box-shadow: 0 10px 12px rgba(255, 255, 255, 0.397);
 }
 
