@@ -470,7 +470,6 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-
     background-size: 700% 700%;
     animation: gradientAnimation 10s ease infinite;
     padding: 20px;
@@ -490,7 +489,7 @@ html, body {
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
     justify-items: center;
 }
@@ -498,17 +497,17 @@ html, body {
 .tech-card {
     background-color: #ffffff8e;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.664);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.233);
     padding: 20px;
     width: 150px;
     text-align: center;
-    transition: transform 0.5s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
 }
 
 .tech-card:hover {
-    transform: translateY(-10px) scale(1.05) !important;
+    transform: scale(1.2);
 }
 
 .tech-card img {
@@ -519,7 +518,6 @@ html, body {
 }
 
 .tech-card:hover img {
-    filter: brightness(1.5);
     transform: scale(1.2);
 }
 
@@ -532,11 +530,9 @@ html, body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
