@@ -19,17 +19,17 @@ function animateCursor() {
   // Small ball movement (faster and more precise)
   ballX += (mouseX - ballX) / 3;
   ballY += (mouseY - ballY) / 3;
-  
+
   // Circle movement (slower and more laggy)
   circleX += (mouseX - circleX) / 9;
-  circleY += (mouseY - circleY) / 9;  
-  
+  circleY += (mouseY - circleY) / 9;
+
   // Apply positions
   cursor.style.left = `${ballX}px`; // Small ball
   cursor.style.top = `${ballY}px`;
   cursorFollower.style.left = `${circleX}px`; // Circle
   cursorFollower.style.top = `${circleY}px`;
-  
+
   requestAnimationFrame(animateCursor);
 }
 
@@ -52,15 +52,15 @@ document.querySelectorAll('a, button, [data-cursor-hover]').forEach(el => {
 //Fade in e fade out
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".project, .contact-card, .tech-card");
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-in');
         entry.target.classList.remove('fade-out');
         setTimeout(() => {
-      entry.target.style.pointerEvents = 'auto'; // Habilita interações
-    }, 10);
+          entry.target.style.pointerEvents = 'auto'; // Habilita interações
+        }, 10);
       } else {
         entry.target.classList.remove('fade-in');
         entry.target.classList.add('fade-out');
@@ -79,13 +79,30 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         entry.target.style.setProperty('--animation-delay', `${index * 0.1}s`);
         entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target); 
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
   elements.forEach((el, index) => {
-    el.setAttribute("data-delay", index); 
+    el.setAttribute("data-delay", index);
     observer.observe(el);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const el = document.getElementById("typewriter");
+  if (!el) return;
+  const text = el.textContent;
+  el.textContent = "";
+  el.classList.add("typewriter");
+  let i = 0;
+  function type() {
+    if (i <= text.length) {
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, 80);
+    }
+  }
+  type();
 });
